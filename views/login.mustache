@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <link rel="stylesheet" href="/css/main.css" />
+</head>
+
+<body>
+  <h1>Please login!</h1>
+  {{#error}}
+  <div class="err">{{.}}</div>
+  {{/error}}
+  <form action="/login" method="post" formaction='/'>
+    <input type="text" name="userName" id="userName" placeholder="username"></input><br />
+    <input type="password" name="password" id="password" placeholder="password"></input><br /><br />
+    <button type="submit">Login</button>
+    <div>
+      <h2>Create New Account</h2>
+      <button type="submit" formaction="/login/register" name="register">Create Account</button>
+    </div>
+  </form>
+</body>
+
+</html>
